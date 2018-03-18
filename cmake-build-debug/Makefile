@@ -47,24 +47,13 @@ RM = "C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Alex\Documents\GitHub\POO
+CMAKE_SOURCE_DIR = E:\CoadaCuPrioritati
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Alex\Documents\GitHub\POO\cmake-build-debug
+CMAKE_BINARY_DIR = E:\CoadaCuPrioritati\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,11 +66,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Alex\Documents\GitHub\POO\cmake-build-debug\CMakeFiles C:\Users\Alex\Documents\GitHub\POO\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\CoadaCuPrioritati\cmake-build-debug\CMakeFiles E:\CoadaCuPrioritati\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Alex\Documents\GitHub\POO\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\CoadaCuPrioritati\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named POO
+# Target rules for targets named CoadaCuPrioritati
 
 # Build rule for target.
-POO: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 POO
-.PHONY : POO
+CoadaCuPrioritati: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 CoadaCuPrioritati
+.PHONY : CoadaCuPrioritati
 
 # fast build rule for target.
-POO/fast:
-	$(MAKE) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/build
-.PHONY : POO/fast
+CoadaCuPrioritati/fast:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/build
+.PHONY : CoadaCuPrioritati/fast
+
+PQueue.obj: PQueue.cpp.obj
+
+.PHONY : PQueue.obj
+
+# target to build an object file
+PQueue.cpp.obj:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/PQueue.cpp.obj
+.PHONY : PQueue.cpp.obj
+
+PQueue.i: PQueue.cpp.i
+
+.PHONY : PQueue.i
+
+# target to preprocess a source file
+PQueue.cpp.i:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/PQueue.cpp.i
+.PHONY : PQueue.cpp.i
+
+PQueue.s: PQueue.cpp.s
+
+.PHONY : PQueue.s
+
+# target to generate assembly for a file
+PQueue.cpp.s:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/PQueue.cpp.s
+.PHONY : PQueue.cpp.s
+
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\CoadaCuPrioritati.dir\build.make CMakeFiles/CoadaCuPrioritati.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -128,9 +182,15 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... rebuild_cache
-	@echo ... POO
+	@echo ... CoadaCuPrioritati
 	@echo ... edit_cache
+	@echo ... rebuild_cache
+	@echo ... PQueue.obj
+	@echo ... PQueue.i
+	@echo ... PQueue.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
